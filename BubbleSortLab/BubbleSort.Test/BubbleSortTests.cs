@@ -5,11 +5,13 @@ namespace BubbleSort.Test;
 public class BubbleSortTests
 {
 
-    /*
-    [TestCaseSource(nameof(array))]
+    
+    [TestCase(new int[] {5, 3, 2, 4, 1}, new int[] { 1, 2, 3, 4, 5 })]
+    [TestCase(new int[] {20, 10, 17, 23, 34}, new int[] { 10, 17, 20, 23, 34 })]
+    [TestCase(new int[] {999, 777, 1111, 333, 123}, new int[] { 123, 333, 777, 999, 1111 })]
     public void SortArray_WhenGivenAnArrayOfInts_ReturnSortedArray(int[] array, int[] expectedResult)
     {
-        // Arrange
+        
         // Act
         var result = BubbleSorter.SortArray(array);
 
@@ -17,11 +19,6 @@ public class BubbleSortTests
         Assert.That(result, Is.EqualTo(expectedResult));
     }
 
-    public static object[] array =
-    {
-        new int[] { 5, 3, 2, 4, 1 },
-        new int[] { 1, 2, 3, 4, 5 }
-    }; */
 
     [Test]
     public void MergeArrays_WhenGivenNullArrays_ReturnArgumentException()
